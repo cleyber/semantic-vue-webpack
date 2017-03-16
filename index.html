@@ -6,12 +6,118 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/messenger/1.5.0/css/messenger.min.css" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/messenger/1.5.0/css/messenger-theme-air.min.css" />
+   <link rel="stylesheet" href="css/style.css">
    <title>semantic-vue</title>
 </head>
+
+
+<body>
+      <!-- <header>
+         <div class="ui very wide sidebar visible inverted vertical menu">
+           <a class="item">
+             1
+           </a>
+           <a class="item">
+             2
+           </a>
+           <a class="item">
+             3
+           </a>
+         </div>
+      </header> -->
+   <main>
+      <div id="app">
+         <!-- Login -->
+         <div class="ui grid">
+            <div class="six wide column"></div>
+            <div class="ten wide column">
+               <form class="ui form" id="form-1">
+                  <div class="field">
+                     <div class="two fields">
+                        <div class="field">
+                           <input type="text" placeholder="Correo" name="correo">
+                        </div>
+                        <div class="field">
+                           <input type="password" placeholder="Clave" name="clave">
+                        </div>
+                        <div class="field"><button class="ui button primary">Ingresar</button></div>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+         <div class="" id="titulo">
+            <h1 class="ui center aligned dividing header">Ejemplo con Semantic-ui y Vue 2.0</h1>
+         </div>
+
+         <!-- Registrarse -->
+         <div class="ui container">
+            <div class="ui grid" id="form-2">
+               <div class="eight wide column">
+                  <div class="ui container">
+                     <div class="ui raised segment">
+                        <h2 class="ui center aligned header">Usuarios</h2>
+                        <table class="ui celled striped table">
+                           <thead>
+                              <tr>
+                                 <th>Nombre</th>
+                                 <th>Correo</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr v-for="todo in todos">
+                                 <td>{{todo.nombre}}</td>
+                                 <td>{{todo.correo}}</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div class="eight wide column">
+                  <div class="ui container">
+                     <div class="ui raised segment">
+                        <h2 class="ui center aligned header">Registrate</h2>
+                        <form action="" class="ui form" @submit.prevent="addToList">
+                           <div class="field">
+                              <div class="two fields">
+                                 <div class="field">
+                                    <input type="text" v-model.trim="users.nombre" placeholder="Nombre">
+                                 </div>
+                                 <div class="field">
+                                    <input type="email" v-model.trim="users.correo" placeholder="Correo">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="field">
+                              <div class="fields">
+                                 <div class="eight wide field">
+                                    <input type="password" v-model.trim="users.clave" placeholder="Contraseña">
+                                 </div>
+                                 <div class="eight wide field">
+                                    <input type="password" v-model.trim="users.confirmar" placeholder="Confirmar Contraseña">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="field">
+                              <button type="submit" class="ui button primary">Registrarme</button>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </div>
+
+   </main>
 <body>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.4/vue.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/messenger/1.5.0/js/messenger.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
+   <script src="src/main.js"></script>
 </body>
 </html>
